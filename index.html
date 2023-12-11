@@ -1,7 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Change Button</title>
+  <style>
+    /* Add some basic styling for the button */
+    #colorButton {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: grey;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
 <body>
-<h1>Gali</h1>
-<p>is gaming.</p>
+
+<!-- Define the button in HTML -->
+<button id="colorButton" onclick="changeColor()">Click me</button>
+
+<!-- Include the JavaScript code -->
+<script>
+  // JavaScript function to change the color of the button
+  function changeColor() {
+    var button = document.getElementById('colorButton');
+
+    // Check the current color
+    if (button.style.backgroundColor === 'grey') {
+      // Change to green if the current color is grey
+      button.style.backgroundColor = 'green';
+    } else {
+      // Change to grey if the current color is green
+      button.style.backgroundColor = 'grey';
+    }
+  }
+</script>
+
 </body>
 </html>
